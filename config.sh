@@ -75,6 +75,11 @@ echo GECKO_OBJDIR=$PWD/objdir-gecko >> .tmp-config
 echo DEVICE_NAME=$1 >> .tmp-config
 
 case "$1" in
+"galaxy-550")
+	echo DEVICE=i5500 >> .tmp-config &&
+	repo_sync $1
+	;;
+	
 "galaxy-s2")
 	echo DEVICE=galaxys2 >> .tmp-config &&
 	repo_sync $1
